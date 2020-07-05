@@ -18,7 +18,7 @@ def getColsValsCPU(path, filename):
             cols.append(i[0].replace('\t','').replace(' ','_'))
             values.append(str(i[1]))
 
-    size = cols.count("processor")
+    size = cols.count("processor")+1
     return cols, values, size, flag
 
 # función para parsear informacion de procesos corriendo (ps -ax)
