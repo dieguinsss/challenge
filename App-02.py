@@ -25,7 +25,7 @@ app = Flask(__name__)
 # se crean las rutas adonde responderá el servidor
 @app.route('/')
 def index():
-    return "Bienvenido al Challenge de Mercado Libre"
+    return "************ Bienvenido al Challenge ************"
 
 # se crean las rutas adonde responderá el servidor. En la ruta resultado se
 # obtiene el archivo JSON

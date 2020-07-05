@@ -87,7 +87,7 @@ def getColsValsWHO(path, filename):
 def getColsValsVER(path, filename):
     input = open(path+filename).readlines()
     counter = 0
-    cols = ['kernel_name','hostname','version','system','date','hw','processor', 'os']
+    cols = ['kernel_name','hostname','version','system','os']
     values = []
     flag = 1
 
@@ -98,9 +98,6 @@ def getColsValsVER(path, filename):
         values.append(matchObj.group(3))
         values.append(matchObj.group(4))
         values.append(matchObj.group(5))
-        values.append(matchObj.group(6))
-        values.append(matchObj.group(7))
-        values.append(matchObj.group(8))
 
     size = len(input)+1
 

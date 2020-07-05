@@ -20,11 +20,7 @@ dicWHO = dicParser.setDictionary(sizeWHO, colsWHO, valuesWHO, flagWHO)
 dicVER = dicParser.setDictionary(sizeVER, colsVER, valuesVER, flagVER)
 
 # consolida los diccionarios
-dicMerge = {}
-dicMerge.update(dicCPU)
-dicMerge.update(dicPRC)
-dicMerge.update(dicWHO)
-dicMerge.update(dicVER)
+dicMerge = {'cpu' : dicCPU,'procesos' : dicPRC, 'who:' : dicWHO, 'version' : dicVER}
 
 # codifica el contenido del JSON
 jsonFILE = json.dumps(dicMerge, indent = 4, separators = (',', ': '))
