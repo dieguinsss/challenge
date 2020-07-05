@@ -92,7 +92,7 @@ def getColsValsVER(path, filename):
     flag = 1
 
     for i in input:
-        matchObj = re.match( r'\s*(.*?)\s+(.*?)\s+(.*?)\s+(.*?\s+.*?)\s+(.*?\s+.*?\s+.*?\s+.*?\s+.*?\s+.*?)\s+(.*?)\s+(.*?)\s+(.*)\n',i,0)
+        matchObj = re.match( r'\s*(.*?)\s+(.*?)\s+(.*?)\s+(.*)\s+(.*Linux$)',i,0)
         values.append(matchObj.group(1))
         values.append(matchObj.group(2))
         values.append(matchObj.group(3))
