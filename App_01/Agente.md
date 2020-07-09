@@ -98,3 +98,5 @@ Función utilizada para parsear los datos del archivo 'output3.txt', este contie
 Función utilizada para configurar los diccionarios con la información parseada.
 
 ```setDictionary(size, cols, values, flag)```
+
+### FIN
