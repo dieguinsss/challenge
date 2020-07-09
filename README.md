@@ -20,10 +20,10 @@ A continuación se detallan los requerimientos principales:
 
 **Instalación de Python 3**
 
-'ver más en -> https://www.python.org/downloads/source/
+Ver más en -> https://www.python.org/downloads/source/
 
 **Instalación de Flask**
 
 > $ pip install Flask
 
-'ver más en -> https://flask.palletsprojects.com/en/1.1.x/installation/
+Ver más en -> https://flask.palletsprojects.com/en/1.1.x/installation/
