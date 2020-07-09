@@ -1,4 +1,6 @@
-## Challenge
+# Challenge DEV
+## Compliance continuo de servidores
+
 La idea de este repositorio es compartir los aplicativos configurados para el Challenge de desarrollo.
 
 En el mismo se encuentran alojados 3 aplicativos:
@@ -7,7 +9,7 @@ En el mismo se encuentran alojados 3 aplicativos:
 2. **API** - Se trata de un API o interfaz para el envío y presentación de los datos recolectados.
 3. **Endpoint** - Script que recolecta la información mediante desde un cliente en la red.
 
-# **Requerimientos**
+### **Requerimientos**
 
 El aplicativo a sido preparado para ser utilizado en plataformas Linux.
 
