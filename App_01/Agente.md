@@ -79,56 +79,26 @@ y también, para almacenar los archivos resultantes en el servidor local.
 **dicParser**
 Este módulo dispone las funciones para llevar a cabo el parseo de los datos recolectados y la construccin de los dicionarios.
 
-Función utilizada para parsear los datos del archivo 'output0.txt', este contiene la ***Información sobre el procesador***
+Función utilizada para parsear los datos del archivo 'output0.txt', este contiene la ***Información sobre el procesador***.
 
-```dicParser.getColsValsCPU(path, filename)```
+```getColsValsCPU(path, filename)```
 
-Listado de procesos corriendo.
-Usuarios con una sesión abierta en el sistema.
-Nombre del sistema operativo.
-Versión del sistema operativo
+Función utilizada para parsear los datos del archivo 'output1.txt', este contiene un ***Listado de los procesos corriendo***.
 
+```getColsValsPRC(path, filename)```
 
-```dicParser.getColsValsPRC(path, filename)```
+Función utilizada para parsear los datos del archivo 'output2.txt', este contiene la lista de ***Usuarios con una sesión abierta en el sistema***.
 
-```dicParser.getColsValsWHO(path, filename)```
+```getColsValsWHO(path, filename)```
 
-```dicParser.getColsValsVER(path, filename)```
+Función utilizada para parsear los datos del archivo 'output3.txt', este contiene el detalle acerca del ***Nombre del sistema operativo*** y la ***Versión del sistema operativo***.
 
-```dicParser.setDictionary(size, cols, values, flag)```
+```getColsValsVER(path, filename)```
 
+Función utilizada para configurar los diccionarios con la información parseada.
 
-```saveFile(path, filename, data)```
+```setDictionary(size, cols, values, flag)```
 
+###Comentarios###
 
-```saveFile(path, filename, data)```
-
-```saveFile(path, filename, data)```
-```
-# parsea los contenidos recolectados
-colsCPU, valuesCPU, sizeCPU, flagCPU = dicParser.getColsValsCPU(path,'output0.txt')
-colsPRC, valuesPRC, sizePRC, flagPRC = dicParser.getColsValsPRC(path,'output1.txt')
-colsWHO, valuesWHO, sizeWHO, flagWHO = dicParser.getColsValsWHO(path,'output2.txt')
-colsVER, valuesVER, sizeVER, flagVER = dicParser.getColsValsVER(path,'output3.txt')
-
-# configura los diccionarios de datos con la información recoletada
-dicCPU = dicParser.setDictionary(sizeCPU, colsCPU, valuesCPU, flagCPU)
-dicPRC = dicParser.setDictionary(sizePRC, colsPRC, valuesPRC, flagPRC)
-dicWHO = dicParser.setDictionary(sizeWHO, colsWHO, valuesWHO, flagWHO)
-dicVER = dicParser.setDictionary(sizeVER, colsVER, valuesVER, flagVER)
-
-# consolida los diccionarios
-dicMerge = {'cpu' : dicCPU,'procesos' : dicPRC, 'who:' : dicWHO, 'version' : dicVER}
-
-# codifica el contenido del JSON
-jsonFILE = json.dumps(dicMerge, indent = 4, separators = (',', ': '))
-
-# obtiene datos del servidor para salvar el archivo
-hostname = socket.gethostname()
-ip_address =  socket.gethostbyname(hostname)
-date = str(time.strftime('%Y-%m-%d'))
-
-#salva el archivo JSON
-fileAdmin.saveFile(path,"<"+ip_address+">_<"+date+">.json",jsonFILE)
-```
-,mn,n
+...
