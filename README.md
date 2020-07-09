@@ -26,3 +26,7 @@ Ver más en -> https://www.python.org/downloads/source/
 > $ pip install Flask
 
 Ver más en -> https://flask.palletsprojects.com/en/1.1.x/installation/
+
+### **Autor**
+
+**Diego Soreira**
