@@ -36,9 +36,10 @@ Posteriormente acceder mediante el navegador al servidor, desde el local mediant
 Esta presentará un mensaje de bienvenida "************ Bienvenido al Challenge ************".
 Por otra parte el siguiente link:
 
-```http://localhost:5000/resultado
+```http://localhost:5000/resultado```
 
 Presentará en pantalla los resultados obtenidos del archivo JSON en el mismo formato o si no existe información un mensaje indicando ">> No se han encontrado archivos."
+
 ### Construcción
 
 A continuación se detalla brevemente la estructura del código.
