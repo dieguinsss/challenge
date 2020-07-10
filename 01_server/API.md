@@ -11,7 +11,7 @@ Antes de la ejecutar el aplicativo verifique que la ruta de la variable de entor
 Por otra parte, si va a ejecutar el archivo directamente con como script desde la terminal, asegúrese que el archivo **02_API.py** disponga permisos de ejecución.
 
 ```
-$ ls -la 02_API.py 
+$ ls -la 02_API.py
 
 -rwxr-xr-x 1 user group 1443 jul  7 11:56 02_API.py
 ```
@@ -27,7 +27,7 @@ Para su ejecución utilice la siguiente sentencia. En algunos casos podría vari
 
 o
 
-```$ python3 01_agente.py```
+```$ python3 02_API.py```
 
 Posteriormente acceder mediante el navegador al servidor, desde el local mediante la siguiente url:
 

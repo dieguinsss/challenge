@@ -35,11 +35,10 @@ Para el argumento 'http://localhost:5000/resultado', deberá ser ajustar el host
 Si todo ha corrido bien el script debería dejar el siguiente archivos en el directorio.
 ```
 -rw-r--r-- 1 user group 89433 jul  9 17:29  '<127.0.1.1>_<2020-07-09>.json'
-```
 
 ### Construcción
 
-A continuación se detalla una breve explicación del código. 
+A continuación se detalla una breve explicación del código.
 Se trata de una estructura sencilla en la cual el proceso recibe una variable 'argumento' con el host adonde se debe conectar. Posteriormente, descarga el contenido JSON y por último almacena el archivo con el nombre del servidor y la fecha actual.
 
 ***Librerías***
@@ -54,7 +53,7 @@ Inicialmente para su funcionamiento utiliza las libreras propias de Python
 ```
 #!/usr/bin/env python3
 import os, requests, time
-import json, fileAdmin, re,sys
+import json, fileAdmin, re, sys
 ```
 
 Adicionalmente utiliza el módulo **fileAdmin**, donde aprovecha la función
