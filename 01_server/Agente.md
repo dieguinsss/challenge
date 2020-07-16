@@ -39,12 +39,13 @@ o
 
 Si todo ha corrido bien el script debería dejar los siguientes archivos en el directorio.
 ```
--rw-r--r-- 1 user group 89433 jul  9 17:29  '<127.0.1.1>_<2020-07-09>.json'
 -rw-r--r-- 1 user group  4412 jul  9 17:29  output0.txt
 -rw-r--r-- 1 user group 36414 jul  9 17:29  output1.txt
 -rw-r--r-- 1 user group   310 jul  9 17:29  output2.txt
 -rw-r--r-- 1 user group   105 jul  9 17:29  output3.txt
 ```
+y enviar el contenido al servidor destino
+
 
 ### Construcción
 
