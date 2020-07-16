@@ -1,6 +1,6 @@
 # API
 
-API o interfaz para el envío y presentación de los datos recolectados.
+API para la recepción y consolidación de los datos enviados por el agente.
 
 ### Pre-requisitos
 
@@ -59,6 +59,6 @@ Adicionalmente es preciso instalar y configura la librería Flask, como se indic
 from flask import Flask,request
 ```
 
-En este caso se trata de un script muy sencillo que mediante Flask se levanta un servicio web publicado por default en el puerto 5000. El mismo se encarga de recibir los mensajes POST enviados por el agente a la url http://ip_de_servidor_central:5000/ y de almacenar en un archivo JSON, los resultados.
+En este caso se trata de un script muy sencillo que mediante Flask levanta un servicio web publicado por default en el puerto 5000. El mismo se encarga de recibir los mensajes POST enviados por el agente a la url http://ip_de_servidor_central:5000/resultado y de almacenar el contenido en un archivo JSON, los resultados.
 
 ### FIN
