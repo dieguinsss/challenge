@@ -8,18 +8,18 @@ Es un script que permite de realizar un discovery y recolectar de los siguientes
 * Nombre del sistema operativo.
 * Versión del sistema operativo.
 
-Y finalmente los resultados son almacenado en el mismo directorio en un archivo consolidado denominado **<IP de servidor>_<AAAA-MM-DD>.json**
+Al finalizar envia los datos al servidor central en formato JSON.
 
 ### Pre-requisitos
 
-Antes de la ejecutar el aplicativo verifique que la ruta de la variable de entorno en Linux sea la correcta.
+Antes de ejecutar el aplicativo verifique que la ruta de la variable de entorno en Linux sea la correcta.
 
 ```#!/usr/bin/env python3```
 
 Por otra parte, si va a ejecutar el archivo directamente con como script desde la terminal, asegúrese que el archivo **01_agente.py** disponga permisos de ejecución.
 
 ```
-$ ls -la 01_agente.py 
+$ ls -la 01_agente.py
 
 -rwxr-xr-x 1 user group 1443 jul  7 11:56 01_agente.py
 ```
@@ -31,11 +31,11 @@ En caso de que requiera asignar permisos, ejecute:
 
 Para su ejecución utilice la siguiente sentencia. En algunos casos podría variar el nombre del ejecutable de Python.
 
-```$ ./01_agente.py```
+```$ ./01_agente.py http://ip_de_servidor_central:5000/resultado```
 
 o
 
-```$ python3 01_agente.py```
+```$ python3 01_agente.py http://ip_de_servidor_central:5000/resultado```
 
 Si todo ha corrido bien el script debería dejar los siguientes archivos en el directorio.
 ```
@@ -53,14 +53,16 @@ A continuación se detalla brevemente la estructura del código.
 ***Librerías***
 Inicialmente para su funcionamiento utiliza las libreras propias de Python
 *os
-*socket
 *time
 *json
+*requests
+*sys
 
 ```
 #!/usr/bin/env python3
-import os, socket, time
+import os, time
 import json, dicParser, fileAdmin
+import requests, sys
 ```
 
 Adicionalmente a estas se han creado 2 módulos adicionales localizados en el mismo directorio para segmentar el código y se explican abajo.

@@ -2,11 +2,11 @@
 
 La idea de este repositorio es compartir los aplicativos configurados para el Challenge de desarrollo.
 
-En el mismo se encuentran alojados 3 aplicativos:
+En el mismo se encuentran alojados 2 aplicativos:
 
-1. [**Agente**](https://github.com/dieguinsss/challenge/blob/master/01_server/Agente.md)- Es un script que permite de realizar un discovery y recolectar de los datos del servidor.
-2. [**API**](https://github.com/dieguinsss/challenge/blob/master/01_server/API.md) - Se trata de un API o interfaz para el envío y presentación de los datos recolectados.
-3. [**Endpoint**](https://github.com/dieguinsss/challenge/blob/master/02_cliente/Endpoint.md) - Es un script para recolectar la información desde una computadora cliente en la red.
+1. [**Agente**](https://github.com/dieguinsss/challenge/blob/master/01_server/Agente.md)- Es un script que permite de realizar un discovery y enviar los datos al servidor central en formato JSON.
+2. [**API**](https://github.com/dieguinsss/challenge/blob/master/02_API/API.md) - Se trata de un API o interfaz para la recepción y consolidación de los datos enviados por el agente.
+
 
 ### **Requerimientos**
 

@@ -31,14 +31,9 @@ o
 
 Posteriormente acceder mediante el navegador al servidor, desde el local mediante la siguiente url:
 
-```http://localhost:5000```
+```http://ip_de_servidor_central:5000/```
 
 Esta presentará un mensaje de bienvenida "************ Bienvenido al Challenge ************".
-Por otra parte el siguiente link:
-
-```http://localhost:5000/resultado```
-
-Presentará en pantalla los resultados obtenidos del archivo JSON en el mismo formato o si no existe información un mensaje indicando ">> No se han encontrado archivos."
 
 ### Construcción
 
@@ -48,19 +43,22 @@ A continuación se detalla brevemente la estructura del código.
 Inicialmente para su funcionamiento utiliza las libreras propias de Python
 *os
 *re
+*time
 *json
 
+
 ```
-import os, re
-import json
+import os, re, time
+import json, fileAdmin
+
 ```
 
 Adicionalmente es preciso instalar y configura la librería Flask, como se indica en el Readme.md del proyecto.
 
 ```
-from flask import Flask
+from flask import Flask,request
 ```
 
-En este caso se trata de un script muy sencillo que mendiante Flask se levanta un servicio web publicado por default en el puerto 5000. El mismo se encarga de abrir y decodificar el archivo JSON obtenido con el aplicativo **Agente**.
+En este caso se trata de un script muy sencillo que mediante Flask se levanta un servicio web publicado por default en el puerto 5000. El mismo se encarga de recibir los mensajes POST enviados por el agente a la url http://ip_de_servidor_central:5000/ y de almacenar en un archivo JSON, los resultados.
 
 ### FIN

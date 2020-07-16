@@ -1,6 +1,13 @@
 #!/usr/bin/env python3
-import os, socket, time
+import os, time
 import json, dicParser, fileAdmin
+import requests, sys
+
+# EJEMPLOS
+# curl -X POST -d 'hola' http://localhost:5000/resultado
+# curl -X POST -d '{name: diego, age: 37}' -H 'Content-Type: application/json' http://localhost:5000/resultado
+#
+url = str(sys.argv[1])
 
 # setear ruta donde se van a recuperar los archivos.
 path = os.getcwd()+"/"
@@ -25,10 +32,6 @@ dicMerge = {'cpu' : dicCPU,'procesos' : dicPRC, 'who:' : dicWHO, 'version' : dic
 # codifica el contenido del JSON
 jsonFILE = json.dumps(dicMerge, indent = 4, separators = (',', ': '))
 
-# obtiene datos del servidor para salvar el archivo
-hostname = socket.gethostname()
-ip_address =  socket.gethostbyname(hostname)
-date = str(time.strftime('%Y-%m-%d'))
-
-#salva el archivo JSON
-fileAdmin.saveFile(path,"<"+ip_address+">_<"+date+">.json",jsonFILE)
+#envia JSON al agente
+r = requests.post(url, data = jsonFILE)
+print(r.text)
